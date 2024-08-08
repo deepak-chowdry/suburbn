@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react'
 import Image from 'next/image';
 import gsap from "gsap";
+import { useGSAP } from '@gsap/react';
 
 
 const SearchBox = () => {
@@ -10,7 +11,7 @@ const SearchBox = () => {
 
   let isSearchOpen = false;
 
-  useEffect(() => {
+  useGSAP(() => {
     const handleSearchClick = () => {
       if (isSearchOpen) {
         gsap.to(searchBox.current, {

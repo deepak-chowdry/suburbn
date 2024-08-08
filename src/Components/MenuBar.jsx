@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react'
 import { Poppins } from "next/font/google";
 import gsap from "gsap";
 import Link from 'next/link';
+import { useGSAP } from '@gsap/react';
 
 const popp = Poppins({
     subsets: ["latin"],
@@ -17,7 +18,7 @@ const MenuBar = () => {
 
     let isMenuOpen = false;
 
-    useEffect(() => {
+    useGSAP(() => {
         const handleMenuClick = () => {
             if (isMenuOpen) {
                 gsap.to(path1.current, {
