@@ -28,7 +28,7 @@ const MenuBar = () => {
                     attr: { d: "M 0 13 L 25 13" },
                 });
                 gsap.to(menuRef.current, {
-                    height: 0,
+                    top: '-384px',
                     display: 'none',
                     opacity: 0,
                     duration: 0.5,
@@ -44,7 +44,7 @@ const MenuBar = () => {
                     attr: { d: "M 0 16 L 17 1" },
                 });
                 gsap.to(menuRef.current, {
-                    height: '400px',
+                    top: 0,
                     display: 'flex',
                     opacity: 1,
                     duration: 0.5,
@@ -80,7 +80,7 @@ const MenuBar = () => {
                     <path ref={path1} d="M 0 5 L 25 5" />
                     <path ref={path2} d="M 0 13 L 25 13" />
                 </svg>
-                <div ref={menuRef} className={`hidden items-center justify-center w-full absolute h-0 left-0 top-0 opacity-0 bg-zinc-100 shadow-sm z-10 ${popp.className}`}>
+                <div ref={menuRef} className={`hidden items-center justify-center w-full absolute h-96 left-0 -top-96 opacity-0 bg-zinc-100 shadow-sm z-10 ${popp.className}`}>
                     <div className='flex flex-col justify-end h-5/6 w-11/12'>
                         <div className='flex flex-col items-end text-5xl uppercase space-y-2 h-2/3 w-full'>
                             <Link href={'/store'}>Store</Link>
