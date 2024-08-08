@@ -133,7 +133,7 @@ const Navbar = () => {
                             <path ref={path1} d="M 0 5 L 25 5" />
                             <path ref={path2} d="M 0 13 L 25 13" />
                         </svg>
-                        <div ref={menuRef} className={`hidden items-center justify-center w-full absolute h-96 left-0 -top-96 opacity-0 bg-zinc-100 shadow-sm z-10 ${popp.className}`}>
+                        {/* <div ref={menuRef} className={`hidden items-center justify-center w-full absolute h-96 left-0 -top-96 opacity-0 bg-zinc-100 shadow-sm z-10 ${popp.className}`}>
                             <div className='flex flex-col justify-end h-5/6 w-11/12'>
                                 <div className='flex flex-col items-end text-5xl uppercase space-y-2 h-2/3 w-full'>
                                     <Link href={'/store'}>Store</Link>
@@ -144,7 +144,7 @@ const Navbar = () => {
                                     <h3>INR ₹ | India</h3>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div id="logo" className='w-auto'>
                         <Image src={'/Img/logo-black.svg'} width={100} height={100} alt='logo' priority className='w-28' />
@@ -152,7 +152,7 @@ const Navbar = () => {
                     <div className='flex items-center justify-end w-1/2 space-x-5'>
                         <div className=''>
                             <Image ref={searchIcon} src={'/Img/search.svg'} width={23} height={23} alt='search' priority />
-                            <div ref={searchBox} className="absolute w-full h-0 overflow-hidden bg-zinc-50 right-0 top-16 flex items-center justify-center">
+                            {/* <div ref={searchBox} className="absolute w-full h-0 overflow-hidden bg-zinc-50 right-0 top-16 flex items-center justify-center">
                                 <div className="flex flex-col space-y-2 h-[90%] justify-start w-11/12">
                                     <div className="w-full h-14 border border-stone-400 px-4">
                                         <input type="text" className="w-full h-full bg-transparent outline-none border-none" placeholder="Search" />
@@ -161,7 +161,7 @@ const Navbar = () => {
                                         <p>Your Search results</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <Link href={'/cart'}>
                             <Image id="cart-icon" src={'/Img/bag.svg'} width={30} height={30} alt='bag' priority />
