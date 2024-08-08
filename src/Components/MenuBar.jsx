@@ -5,10 +5,7 @@ import gsap from "gsap";
 import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
 
-const popp = Poppins({
-    subsets: ["latin"],
-    weight: ['100', '200', '800']
-});
+
 
 const MenuBar = () => {
     
