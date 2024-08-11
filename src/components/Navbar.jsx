@@ -16,8 +16,9 @@ const Navbar = () => {
           <h2 className='text-lg tracking-wide'>Suburbn.</h2>
           <div className='flex items-center justify-end w-1/2 space-x-5'>
             <Searchbox />
-            <Link href={'/cart'}>
+            <Link href={'/cart'} className='flex items-center relative'>
               <Image id="cart-icon" src={'/bag.svg'} width={30} height={30} alt='bag' priority />
+              <span id='plusone' className='opacity-0 absolute text-[12px] -right-2.5 top-1'>+1</span>
             </Link>
           </div>
         </div>

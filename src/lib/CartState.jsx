@@ -42,6 +42,15 @@ const useCart = () => {
       duration: 1,
       ease: 'elastic.out(1, 0.8)',
     });
+    gsap.fromTo('#plusone', {
+      opacity: 1,
+      y: -5,
+      duration: 1,
+    }, {
+      opacity: 0,
+      y: -10,
+      duration: 1,
+    });
   };
 
   const removeFromCart = (id, name, image, qty, price,) => {
