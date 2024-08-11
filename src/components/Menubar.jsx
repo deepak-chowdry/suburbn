@@ -2,6 +2,9 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import Link from 'next/link'
+import { Poppins } from 'next/font/google';
+
+const popp = Poppins({ subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] });
 
 const Menubar = () => {
     const path1 = useRef();
@@ -67,7 +70,7 @@ const Menubar = () => {
                     <path ref={path1} d="M 0 5 L 25 5" />
                     <path ref={path2} d="M 0 13 L 25 13" />
                 </svg>
-                <div ref={menu} className={`flex items-center justify-center w-full absolute h-0 overflow-hidden left-0 top-0 bg-zinc-100 shadow-sm`}>
+                <div ref={menu} className={`flex items-center justify-center w-full absolute h-0 overflow-hidden left-0 top-0 bg-zinc-100 shadow-sm ${popp.className}`}>
                     <div className='flex flex-col justify-end h-5/6 w-11/12'>
                         <div className='flex flex-col items-end text-5xl uppercase space-y-2 h-2/3 w-full font-medium'>
                             <Link href={'/store'}>Store</Link>
