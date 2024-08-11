@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className='flex items-center justify-center h-20 sticky top-0'>
         <div className='flex items-center justify-between w-11/12'>
           <Menubar />
-          <h2>Mahadev</h2>
+          <h2 className='text-lg'>Mahadev</h2>
           <div className='flex items-center justify-end w-1/2 space-x-5'>
             <Searchbox />
             <Link href={'/cart'}>

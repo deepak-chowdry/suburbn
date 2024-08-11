@@ -15,41 +15,35 @@ const Searchbox = () => {
             if (isSearchOpen) {
                 gsap.to(searchBox.current, {
                     height: 0,
+                    display: "none",
                     opacity: 0,
                     duration: 0.5,
                 });
-                gsap.to('#menu', {
-                    width: '50%',
-                    duration: 0.8,
-                })
+                gsap.to('#box', {
+                    height: 0,
+                    display: "none",
+                    duration: 0.5,
+                });
                 gsap.to('#menubtn', {
                     opacity: 1,
                     duration: 0.6,
-                })
-                gsap.to('#logo', {
-                    justifyContent: 'center',
-                    width: 'fit',
-                    duration: 0.5,
                 })
                 isSearchOpen = false;
             } else {
                 gsap.to(searchBox.current, {
                     height: '340px',
+                    display: "flex",
                     opacity: 1,
                     duration: 0.5,
                 });
-                gsap.to('#menu', {
-                    width: 0,
-                    duration: 0.8,
-                })
+                gsap.to('#box', {
+                    height: "83.33%",
+                    display: "flex",
+                    duration: 0.5,
+                });
                 gsap.to('#menubtn', {
                     opacity: 0,
                     duration: 0.6,
-                })
-                gsap.to('#logo', {
-                    justifyContent: 'start',
-                    width: '100%',
-                    duration: 0.5,
                 })
                 isSearchOpen = true;
             }
@@ -67,9 +61,9 @@ const Searchbox = () => {
         <>
             <div>
                 <Image ref={searchIcon} src={'/search.svg'} width={23} height={23} alt='search' priority />
-                <div ref={searchBox} className="absolute w-full h-0 overflow-hidden bg-zinc-50 right-0 top-20 flex items-center justify-center">
-                    <div className="flex flex-col space-y-2 h-[90%] justify-start w-11/12">
-                        <div className="w-full h-14 border border-stone-400 px-4">
+                <div ref={searchBox} className="absolute w-full h-0 hidden bg-zinc-50 right-0 top-20 items-center justify-center">
+                    <div id='box' className="flex flex-col space-y-2 h-5/6 justify-start w-11/12">
+                        <div className="w-full py-4 border border-stone-400 px-4">
                             <input type="text" className="w-full h-full bg-transparent outline-none border-none" placeholder="Search" />
                         </div>
                         <div>
