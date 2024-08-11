@@ -3,13 +3,16 @@ import Link from 'next/link';
 import { FaInstagram, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 
+
+
 const Footer = () => {
     return (
         <>
             <div className='flex items-center justify-center h-80 md:h-52 bg-stone-950 text-white'>
                 <div className='flex flex-col md:flex-row justify-between h-4/6 w-11/12 gap-6'>
                     <div className='flex flex-col md:w-1/4 space-y-4'>
-                        <h2>Mahadev</h2>
+                    <h2 className='text-lg tracking-wide font-bold'>Suburbn.</h2>
+
                         <p className='text-xs md:text-sm text-white'>The relationship between an artist and collector should be just that... a relationship.</p>
                     </div>
                     <div className='flex flex-col gap-8 h-fit'>

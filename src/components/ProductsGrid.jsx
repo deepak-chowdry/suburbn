@@ -10,8 +10,8 @@ const ProductsGrid = () => {
         <div className="px-3 py-2">
             <div className="grid grid-cols-2">
                 <div className="col-span-2 grid grid-cols-2 md:col-span-3 md:grid-cols-3 lg:col-span-4 lg:grid-cols-4">
-                    <div className="col-span-1 flex flex-col justify-center items-start p-4 border border-zinc-200">
-                        <h2 className="text-xl font-black">URBN. COLLECTION</h2>
+                    <div className="col-span-1 flex flex-col justify-center items-center p-4 border border-zinc-200">
+                        <h2 className="text-lg font-black text-center">URBN. <br /> COLLECTION</h2>
                     </div>
                     {firstThreeProducts.map((product) => (
                         <Link href={`/product/${product.id}`} key={product.id} className="w-full h-auto min-h-0 border border-zinc-200 p-2 group cursor-pointer">

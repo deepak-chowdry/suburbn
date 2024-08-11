@@ -2,18 +2,13 @@ import React from 'react'
 import Products from '@/lib/Products'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Poppins } from "next/font/google";
-const popp = Poppins({
-    subsets: ["latin"],
-    weight: ['100', '200', '800']
-});
 
 const page = () => {
-    
+
     return (
         <>
             <div className='flex flex-col items-center justify-center min-h-screen px-3 py-4'>
-                <h1 className='mb-6 uppercase'>Welcome to <span className={`font-bold ${popp.className}`}>Suburbn</span> Store</h1>
+                <h1 className='mb-6 uppercase'>Welcome to <span className='font-bold'>Suburbn</span> Store</h1>
                 <div className="grid grid-cols-2">
                     <div className="col-span-2 grid grid-cols-2 md:col-span-3 md:grid-cols-3 lg:col-span-4 lg:grid-cols-4">
                         {Products.map((product) => (

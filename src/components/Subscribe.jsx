@@ -10,11 +10,11 @@ const Subscribe = () => {
                     <p className='text-xs text-zinc-500'>Be the first to know about new collections and exclusive offers.</p>
                 </div>
                 <div className='flex items-center justify-between border border-zinc-300 px-5 hover:border-zinc-500 w-full md:w-96 h-16 group'>
-                    <div className='flex flex-col gap-1 transition-all'>
+                    <div className='flex flex-col gap-1 transition-all w-full'>
                         <p className='sm:hidden flex group-hover:text-xs transition-all'>Email</p>
-                        <input type="text" className='bg-transparent outline-none border-none hidden group-hover:block md:block text-sm' placeholder='email'/>
+                        <input type="text" className='bg-transparent outline-none border-none w-full hidden group-hover:block md:block text-sm placeholder:text-transparent md:placeholder:text-zinc-400' placeholder='Email'/>
                     </div>
-                    <Image src={'/Img/arrow-right.svg'} width={16} height={16} alt='' />
+                    <Image src={'/arrow-right.svg'} width={16} height={16} alt='' />
                 </div>
             </div>
         </>
