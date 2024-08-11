@@ -1,9 +1,8 @@
 'use client'
-import Image from 'next/image';
-import Products from '@/lib/Products';
-import { GoPlusCircle } from "react-icons/go";
-import React, { useContext } from 'react';
 import useCart from '@/lib/CartState';
+import Products from '@/lib/Products';
+import Image from 'next/image';
+import { GoPlusCircle } from "react-icons/go";
 
 const page = ({ params }) => {
     const { addToCart } = useCart();
@@ -19,8 +18,8 @@ const page = ({ params }) => {
     return (
         <div className="flex flex-col items-center justify-center min-h-full py-6 px-3">
             <div className="w-full md:w-11/12">
-                <div className="flex flex-col md:flex-row items-center gap-1">
-                    <div className="w-full md:w-1/2 relative mb-2 md:mb-0">
+                <div className="flex flex-col md:flex-row items-center justify-center md:items-start gap-1 md:gap-4 md:h-[550px] md:shadow-sm">
+                    <div className="w-full h-full md:w-1/3 relative mb-2 md:mb-0">
                         <Image
                             src={product.image}
                             alt={product.name}
@@ -30,14 +29,14 @@ const page = ({ params }) => {
                             priority
                         />
                     </div>
-                    <div className="w-full md:w-1/3 md:pl-6 space-y-2">
+                    <div className="w-full md:w-2/5 space-y-3 md:py-28 h-full">
                         <div className='flex items-center justify-between pr-2'>
                             <h1 className="text-xl font-bold uppercase">{product.name}</h1>
                             <GoPlusCircle className='text-lg' />
                         </div>
                         <p className="text-base text-gray-500">Rs. {product.price}.00</p>
                         <p className="text-gray-700">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum, dolor sit amet consectetur elit.
                         </p>
                         <button
                             onClick={handleAddToCart}

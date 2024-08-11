@@ -34,31 +34,37 @@ const CartPage = () => {
                         <p>Your cart is empty.</p>
                     </div>
                 ) : (
-                    <div className="space-y-4 h-full">
-                        {Object.keys(cart).map(key => (
-                            <div key={key} className="flex items-center space-x-4 h-full shadow p-1">
-                                <Image src={cart[key].image} width={1000} height={1000} alt={cart[key].name} className='w-1/3' priority />
-                                <div className='w-3/5 h-28'>
-                                    <div className='flex items-center justify-between'>
-                                        <h2 className="text-lg font-bold uppercase">{cart[key].name}</h2>
-                                        <AiOutlineDelete
-                                            onClick={() => removeFromCart(key, 1, cart[key].name, cart[key].price, cart[key].image)}
-                                            className='text-xl text-red-600' />
-                                    </div>
-                                    <p className="text-zinc-700">Price: {cart[key].price}</p>
-                                    <p className="text-zinc-700">Quantity: {cart[key].qty}</p>
+                    <>
+                        <div className="md:py-2 h-full flex items-center w-full flex-wrap gap-3 justify-center">
+                            {Object.keys(cart).map(key => (
+                                <div key={key} className="flex md:flex-col items-center space-x-2 h-fit md:h-full shadow p-1 md:w-30 w-full relative">
+                                    <Image src={cart[key].image} width={1000} height={1000} alt={cart[key].name} className='w-1/2 h-40 md:h-80 md:object-cover' priority />
+                                    <div className='w-full p-2'>
+                                        <div className='flex flex-col md:flex-row justify-between'>
+                                            <h2 className="font-bold uppercase">{cart[key].name}</h2>
 
+                                            <p className="text-zinc-700 pr-1">Qty: {cart[key].qty}</p>
+                                        </div>
+                                        <p className="text-zinc-700">Price: {cart[key].price}</p>
+                                    </div>
+                                    <button
+                                        onClick={() => removeFromCart(key, 1, cart[key].name, cart[key].price, cart[key].image)}
+                                        className="absolute bottom-2 md:top-3 right-2 md:left-3 py-2 px-3 flex items-center justify-center text-sm h-10 bg-zinc-50 rounded-full shadow w-fit">
+                                        <AiOutlineDelete className='text-lg text-zinc-700' />
+                                    </button>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+
+                        </div>
                         <div className="flex flex-col space-y-2">
                             <h2 className="text-xl">Total: Rs. {total}</h2>
                             <button
-                                className="w-full h-14 bg-stone-950 text-white">
+                                className="w-full md:w-40 h-14 bg-stone-950 text-white">
                                 Checkout
                             </button>
                         </div>
-                    </div>
+                    </>
+
                 )}
             </div>
 
