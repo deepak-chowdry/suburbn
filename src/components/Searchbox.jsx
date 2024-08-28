@@ -54,7 +54,7 @@ const Searchbox = () => {
             <div>
                 <Image ref={searchIcon} src={'/search.svg'} width={23} height={23} alt='search' priority />
                 <div ref={searchBox} className="absolute w-full h-0 hidden bg-zinc-50 right-0 top-16 items-center justify-center">
-                    <div id='box' className="flex flex-col space-y-2 h-5/6 justify-start w-11/12">
+                    <div id='box' className="flex flex-col space-y-2 h-5/6 justify-start w-93 md:w-90">
                         <div className="w-full py-4 border border-stone-400 px-4">
                             <input type="text" className="w-full h-full bg-transparent outline-none border-none" placeholder="Search" />
                         </div>

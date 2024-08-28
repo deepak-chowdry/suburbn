@@ -10,8 +10,11 @@ const Navbar = () => {
 
   return (
     <>
+    <div className='flex items-center justify-center h-10 bg-zinc-900 text-zinc-100'>
+      <p className='uppercase text-s tracking-wide font-medium'>Welcome to Suburbn.</p>
+    </div>
       <div className='flex items-center justify-center h-20 sticky top-0 z-20 bg-zinc-50'>
-        <div className='flex items-center justify-between w-11/12'>
+        <div className='flex items-center justify-between w-93 md:w-90'>
           <Menubar />
           <h2 className={`text-lg uppercase font-black ${popp.className}`}>Suburb<span className='italic'>n</span>.</h2>
           <div className='flex items-center justify-end w-1/2 space-x-5'>

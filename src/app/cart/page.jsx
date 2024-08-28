@@ -35,7 +35,7 @@ const CartPage = () => {
                     </div>
                 ) : (
                     <>
-                        <div className="md:py-2 h-full flex items-center w-full flex-wrap gap-3 justify-center">
+                        <div className="md:py-2 h-full flex items-center w-full flex-wrap gap-3 ">
                             {Object.keys(cart).map(key => (
                                 <div key={key} className="flex md:flex-col items-center space-x-2 h-fit md:h-full shadow p-1 md:w-30 w-full relative">
                                     <Image src={cart[key].image} width={1000} height={1000} alt={cart[key].name} className='w-1/2 h-40 md:h-80 md:object-cover' priority />

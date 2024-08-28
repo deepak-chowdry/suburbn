@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NextTopLoader from "nextjs-toploader";
+import SmoothScroll from "@/components/SmoothScroll";
 
 
 export const metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
           zIndex={1600}
           showAtBottom={false}
         />
+        <SmoothScroll />
         <Navbar />{children}<Footer /></body>
     </html>
   );

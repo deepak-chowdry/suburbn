@@ -41,7 +41,7 @@ const page = ({ params }) => {
                         <button
                             onClick={handleAddToCart}
                             className="w-full h-14 bg-stone-950 text-white">
-                            Add to Cart
+                            Pre-order
                         </button>
                     </div>
                 </div>
