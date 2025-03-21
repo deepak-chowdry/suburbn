@@ -68,7 +68,7 @@ const Menubar = () => {
           height="16"
           id="menubtn"
           stroke="#000"
-          className="cursor-pointer z-50"
+          className="cursor-pointer z-30"
         >
           <path ref={path1} d="M 0 5 L 25 5" />
           <path ref={path2} d="M 0 13 L 25 13" />

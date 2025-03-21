@@ -21,17 +21,11 @@ const page = () => {
                                     className="w-full h-auto object-cover md:group-hover:scale-105 transition-all"
                                 />
                                 <div className='flex items-end justify-between mt-2'>
-                                    <div className='space-y-1'>
+                                    <div className='space-y-1 text-center'>
                                         <p className="text-center text-xs md:text-base">{product.name}</p>
                                         <p className="text-xs text-zinc-500">Rs. {product.price}.00</p>
                                     </div>
-                                    <Image
-                                        src={'/bag.svg'}
-                                        width={30}
-                                        height={36}
-                                        alt='bag'
-                                        className='md:opacity-0 md:group-hover:opacity-100 md:group-hover:-translate-x-2 transition-all'
-                                    />
+                                  
                                 </div>
                             </Link>
                         ))}
